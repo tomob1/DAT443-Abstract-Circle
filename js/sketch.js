@@ -1,20 +1,41 @@
 let slider;
 let colorPicker;
-let backgroundPicker;
+//let backgroundPicker;
 var particles = []
 var colors = ["#3DB2FF", "#FF73464c", "#FFab5675", "#FFee6a7c", "#185ADB", "#0A1931", "#99154E"]
 
 var n, s, maxR
+let img, img2, img3, img4;
+
+/*if (mousePressed) {
+  initParticles = false;
+} else {
+  createCanvas = true;
+}*/
+
+
+function preload() {
+img = loadImage('assets/backgroundgeometric.png')
+//img2 = loadImage('assets/backgrounddiamonds.png')
+//img3 = loadImage('assets/backgroundcircles.png')
+//img4 = loadImage('assets/zenbackground.png')
+
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
   colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(180, height + -300);
+  colorPicker.position(220, height + -420);
 
-  backgroundPicker = createColorPicker('FFab5675');
-  backgroundPicker.position(180, height + -500);
+  //backgroundPicker = createColorPicker('FFab5675');
+  //backgroundPicker.position(180, height + -500);
   initCanvas()
   text('Use this to change the colour of the spiral', 130, 375)
+
+
+    
+
+
 
 }
  /* slider = createSlider(5, 50, 20, 1);
@@ -24,11 +45,17 @@ function setup() {
 }
 */
 
+/*function mousePressed() {
+  img.resize(50, 100);
+}*/
+
+
 function draw() {
   translate(width / 2, height / 2)
   noStroke()
 
 
+  
 
   if (s > 1) {
     if (particles.length != 0) {
@@ -43,12 +70,18 @@ function draw() {
       s -= 2
       initParticles()
 
+      image(img, -1000, -500);
+
       //let val = slider.value();
       //background(val, 100, 100, 100);
 
     }
   }
 }
+
+
+
+
 
 function initParticles() {
   var c = colors[int(random(colors.length))]
@@ -61,7 +94,7 @@ function initParticles() {
 }
 
 function initCanvas() {
-  background(backgroundPicker.color())
+  //background(backgroundPicker.color())
   smooth()
   particles = []
   n = 150
