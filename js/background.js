@@ -1,5 +1,5 @@
 var images = []; 
-var imageFiles = fs.readdirSync("/path/to/folder"); 
+var imageFiles = fs.readdirSync("/backgrounds"); 
 
 for (var i = 0; i < imageFiles.length; i++) { 
   images.push("/backgrounds" + imageFiles[i]); 
