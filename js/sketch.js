@@ -1,46 +1,22 @@
-
+let slider;
 let colorPicker;
 let backgroundPicker;
 var particles = []
 var colors = ["#3DB2FF","#FF73464c","#FFab5675","#FFee6a7c","#185ADB","#0A1931","#99154E"]
-//var button;
-let c;
 
 var n, s, maxR
 
-
-/*function preload() {
-  button = loadImage(assets/train.station.jpeg)
-}
-*/
 function setup() {
 	createCanvas(windowWidth, windowHeight)
-
     colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(180, height + -300);
+  colorPicker.position(0, height + 5);
 
   backgroundPicker = createColorPicker('FFab5675');
   backgroundPicker.position(180, height + -500);
   initCanvas()
   text('Use this to change the colour of the spiral', 130, 280)
-
-  /*button.loadPixels();
-  c = button.get(button.width / 2, img.height / 2);
-
-  button = createImage(train.station.jpeg)
-  button.position(19, 19);
-  button.mousePressed(changeBG);
-  button.width = (100)
-  button.height = (200)
-}*/
-    
-
-
-
-function draw() {
-  let val = slider.value();
-  background(val);
 }
+    
 
 
 
@@ -78,8 +54,6 @@ function initParticles() {
 	}
 }
 
-
-
 function initCanvas() {
 	background(backgroundPicker.color())
 	smooth()
@@ -96,12 +70,6 @@ if (keyCode === ENTER
 }
 }
 
-
-/*function changeBG() {
-  var val = random(255);
-  background(train.station.png);
-}
-*/
 
 class Particle {
   
@@ -147,5 +115,4 @@ class Particle {
 
 
 
-}
 }

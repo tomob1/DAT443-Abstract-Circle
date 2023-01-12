@@ -6,12 +6,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/*.childone{
-
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.childtwo{
-   
-}*/
-
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
