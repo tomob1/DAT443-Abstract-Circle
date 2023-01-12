@@ -1,10 +1,4 @@
-var images = []; 
-var imageFiles = fs.readdirSync("assets/backgrounds"); 
-
-for (var i = 0; i < imageFiles.length; i++) { 
-  images.push("assets/backgrounds" + imageFiles[i]); 
-}
-
-var randomNumber = Math.floor(Math.random() * images.length); 
-
-document.body.style.backgroundImage = "url(" + images[randomNumber] + ")";
+var images = document.querySelectorAll("img[src^='/assets/backgrounds/']");
+var randomIndex = Math.floor(Math.random() * images.length);
+var randomImage = images[randomIndex];
+document.body.style.backgroundImage = "url('" + randomImage.src + "')";
