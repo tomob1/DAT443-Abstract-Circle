@@ -15,7 +15,7 @@ let img, img2, img3, img4;
 
 
 function preload() {
-img = loadImage('assets/backgroundgeometric.png')
+img = loadImage('assets/backgrounds/backgroundgeometric.png')
 //img2 = loadImage('assets/backgrounddiamonds.png')
 //img3 = loadImage('assets/backgroundcircles.png')
 //img4 = loadImage('assets/zenbackground.png')
