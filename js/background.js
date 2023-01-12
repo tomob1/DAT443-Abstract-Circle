@@ -1,8 +1,8 @@
 var images = []; 
-var imageFiles = fs.readdirSync("js/backgrounds"); 
+var imageFiles = fs.readdirSync("assets/backgrounds"); 
 
 for (var i = 0; i < imageFiles.length; i++) { 
-  images.push("js/backgrounds" + imageFiles[i]); 
+  images.push("assets/backgrounds" + imageFiles[i]); 
 }
 
 var randomNumber = Math.floor(Math.random() * images.length); 
